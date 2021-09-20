@@ -15,7 +15,8 @@
       # nix develop
       devShell = give ({ pkgs, mkShell, lib, ... }: with lib;
         mkShell {
-          packages = with pkgs; [ nodejs yarn cargo solana ];
+          packages = with pkgs; [ solana ]
+            ++ [ nodejs yarn ] ++ [ cargo rustc ];
           shellHook = with pkgs.scripts;
             optionalString (!(pathExists ./.gitignore)) ''
               ${cloneFromGitHub {
