@@ -24,6 +24,15 @@
                 rev = "master";
                 sha256 = "03invymsz6bm2pa8v8k26a0g6gbrsrh64vz6s4n96bk5y6iabn9w";
               }} ./
+            '' + ''
+              pushd js
+                [ -d node_modules ] || yarn install
+              popd
+              pushd rust
+                [ -d target ] || cargo check
+              popd
+              export NODE_PATH=$(realpath ./node_modules)
+              export PATH=$(realpath ./node_modules/.bin):$PATH
             '';
         }
       );

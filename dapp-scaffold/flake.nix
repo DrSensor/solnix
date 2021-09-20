@@ -24,6 +24,13 @@
                 rev = "main";
                 sha256 = "1jkkiik3b4q5rh8kshnw1x0ps1gwk9bz7rffapv6wa7v4vy2ipyy";
               }} ./
+            '' + ''
+              [ -d node_modules ] || yarn install
+              pushd program
+                [ -d target ] || cargo check
+              popd
+              export NODE_PATH=$(realpath ./node_modules)
+              export PATH=$(realpath ./node_modules/.bin):$PATH
             '';
         }
       );
