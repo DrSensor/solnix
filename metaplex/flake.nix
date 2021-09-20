@@ -22,7 +22,7 @@
                 owner = "metaplex-foundation";
                 repo = "metaplex";
                 rev = "master";
-                sha256 = ""; # RUN `nix develop` to get the hash string
+                sha256 = "03invymsz6bm2pa8v8k26a0g6gbrsrh64vz6s4n96bk5y6iabn9w";
               }} ./
             '';
         }

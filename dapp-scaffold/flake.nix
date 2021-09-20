@@ -22,7 +22,7 @@
                 owner = "solana-labs";
                 repo = "dapp-scaffold";
                 rev = "main";
-                sha256 = ""; # RUN `nix develop` to get the hash string
+                sha256 = "1jkkiik3b4q5rh8kshnw1x0ps1gwk9bz7rffapv6wa7v4vy2ipyy";
               }} ./
             '';
         }

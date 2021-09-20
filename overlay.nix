@@ -24,6 +24,7 @@ in
     version = "1.7.12";
     src = fetchTarball {
       url = "https://github.com/solana-labs/solana/releases/download/v${version}/${pname}-release-${target}.tar.bz2";
+      sha256 = "0c43gm95mcibpid1yhv8mslz3vw7rrg57rgdj7lq4did8lkbwlrk";
     };
     installPhase = ''
       install -Dm755 bin/* -t $out/bin
@@ -34,6 +35,7 @@ in
     version = "1.6.25";
     src = fetchTarball {
       url = "https://github.com/solana-labs/solana/releases/download/v${version}/${pname}-release-${target}.tar.bz2";
+      sha256 = "0nk1bckb5ny2cks849kxav7pi4mj5absq5j4myh5fc1ljfmg40qf";
     };
     installPhase = ''
       install -Dm755 bin/* -t $out/bin
