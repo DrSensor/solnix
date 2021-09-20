@@ -33,8 +33,8 @@
               pushd rust
                 [ -d target ] || cargo check
               popd
-              export NODE_PATH=$(realpath ./node_modules)
-              export PATH=$(realpath ./node_modules/.bin):$PATH
+              export NODE_PATH=$(realpath ./js/node_modules)
+              export PATH=$(realpath ./js/node_modules/.bin):$PATH
             '';
         }
       );
