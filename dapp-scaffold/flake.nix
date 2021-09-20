@@ -18,7 +18,7 @@
           packages = with pkgs; [ nodejs yarn cargo solana ];
           shellHook = with pkgs.scripts;
             optionalString (!(pathExists ./.gitignore)) ''
-              ${cloneFromGithub {
+              ${cloneFromGitHub {
                 owner = "solana-labs";
                 repo = "dapp-scaffold";
                 rev = "main";
