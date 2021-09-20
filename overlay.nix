@@ -27,7 +27,7 @@ in
       sha256 = "0c43gm95mcibpid1yhv8mslz3vw7rrg57rgdj7lq4did8lkbwlrk";
     };
     installPhase = ''
-      install -Dm755 bin/* -t $out/bin
+      install -Dm755 bin/{solana*,spl-token,cargo-*} -t $out/bin
     '';
   };
   solana = mkDerivation rec {
@@ -38,7 +38,7 @@ in
       sha256 = "0nk1bckb5ny2cks849kxav7pi4mj5absq5j4myh5fc1ljfmg40qf";
     };
     installPhase = ''
-      install -Dm755 bin/* -t $out/bin
+      install -Dm755 bin/{solana*,spl-token,cargo-*} -t $out/bin
     '';
   };
 }
