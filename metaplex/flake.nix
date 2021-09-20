@@ -28,7 +28,7 @@
               }} ./
             '' + ''
               pushd js
-                [ -d node_modules ] || yarn install
+                [ -d node_modules ] || yarn install && yarn bootstrap
               popd
               pushd rust
                 [ -d target ] || cargo check
